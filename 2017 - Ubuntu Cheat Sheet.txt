@@ -1,0 +1,105 @@
+Category    | Command                               | Keyboard Shortcut | Description
+----------- | ------------------------------------- | ----------------- | -----------
+Terminal    |
+            |                                       | Ctrl+Shift+C      | Copy
+            |                                       | Ctrl+Shift+V      | Paste
+            |                                       | Ctrl+D            | Exit program
+            |                                       | Ctrl+C            | Kill program
+            |                                       | Up Arrow          | Previous command
+            |                                       | Down Arrow        | Next command (after pressing Up Arrow of course)
+            |                                       | Ctrl+R            | Search for a command in history or
+            |                                       |                   |   previous commands (select by pressing
+                                                                        |   the "tab" key on the keyboard)
+            | clear                                 | Ctrl+L            | Scroll down until the first line is at the
+                                                                        |   top of the terminal
+                                                                        |   (effectively clear the terminal screen)
+Navigation  |
+            | man ls                                |                   | Show manual for the 'ls' command
+            |                                       |                   |   (works with every command)
+            |                                       |                   |   (exit by pressing the "q" key on the keyboard)
+            | pwd                                   |                   | Print working (current) directory (folder)
+            | l or ls                               |                   | List content of the current directory
+            | ls /dir/subdir                        |                   | List content of the /dir/subdir directory
+            | ls -lsrth                             |                   | List content of the current directory
+            |                                       |                   |   sorted in reverse by the modified time
+            |                                       |                   |   (also shows human readble size)
+            | ll or ls -l                           |                   | List content of the current directory in form
+            |                                       |                   |   of a table (includes permissions)
+            | cd /dir/subdir                        |                   | Change directory to /dir/subdir
+            |                                       |                   |   (does not work with sudo)
+            | cp source target                      |                   | Copy file called source to the file called target
+            | cp -r source target                   |                   | Copy directory called source to the directory
+            |                                       |                   |   called target/source
+            | mv source target                      |                   | Move (rename) file (also works for directories)
+            |                                       |                   |   called source to the file called target
+            | nautilus .                            |                   | Open the current directory in the
+            |                                       |                   |   graphical file explorer
+            | nautilus /dir/subdir                  |                   | Open the /dir/subdir directory in the
+            |                                       |                   |   graphical file explorer
+Processes   |
+            | ./program                             |                   | Run a program by opening the file called
+            |                                       |                   |   "program" in the current directory
+            | /dir/subdir/program                   |                   | Run a program by opening the file called
+            |                                       |                   |   "program" in the /dir/subdir directory
+            | indicator-multiload                   |                   | Run a program by opening the file called
+            |                                       |                   |   "indicator-multiload" (works since the path to
+            |                                       |                   |   indicator-multiload is registered in a
+            |                                       |                   |   special place called "Path")
+            | indicator-multiload &                 |                   | Run a program by opening the file called
+            |                                       |                   |   "indicator-multiload" in background
+            |                                       | Ctrl+Z            | Send the currently running program to background
+            | fg                                    |                   | Send the program back to foreground
+Vim         | sudo apt-get install -y vim           |                   | Install vim - a text editor which runs inside
+            |                                       |                   |   of the terminal
+            | sudo vim foo                          |                   | Open (works only with permissions to read) or
+            |                                       |                   |   create the file called "foo" in vim
+            |                                       |                   | (technically the file is only created once the
+            |                                       |                   |   content is saved)
+            |                                       |i (in vim)         | Switch to the regular "Insert" mode
+            |                                       |ESC (in vim)       | Switch back to the "other" mode
+            | :w (in vim)                           |                   | Write to file
+            | :q (in vim)                           |                   | Exit/Quit vim without saving the changes
+            |                                       |                   |   (only works if no changes have been made)
+            | :q! (in vim)                          |                   | Exit/Quit vim without saving the changes
+            |                                       |                   |   (works even when changes have been made)
+            | :wq (in vim)                          |                   | Write and then exit/quit vim
+            |                                       |                   |   (works only with permissions to write)
+            | :wq! (in vim)                         |                   | Write and then exit/quit vim
+            |                                       |                   |   (works even without permissions to write
+            |                                       |                   |   (read-only file))
+            |                                       | Ctrl+Z (in vim)   | Send vim to background
+            | fg (in terminal)                      |                   | Send vim back to foreground
+Ownership   |
+            | sudo chown user:group foo             |                   | Change the owner of the file foo to user
+            |                                       |                   |   called "user" and group called "group"
+            | sudo chown user:group /dir/subdir     |                   | Change the owner of the directory /dir/subdir
+            |                                       |                   |   to user called "user" and group called "group"
+            | sudo chown -r user:group /dir/subdir  |                   | Change the owner of the directory /dir/subdir
+            |                                       |                   |   and everything inside of it to user called
+            |                                       |                   |   "user" and group called "group"
+Permissions | (the first digit stands for the user, the second stands for the group and the third stands for everyone else)
+            | d---------                            |                   | Denotes a directory
+            | d--x------                            |                   | Denotes a directory that can be changed into
+            | ----------                        000 |                   | Denotes a file that cannot neither be read
+            |                                       |                   |   from or written to (also can't be executed)
+            | ---x------                        100 |                   | Denotes a file that can be executed
+            |                                       |                   |   (ran as a program)
+            | --w-------                        200 |                   | Denotes a file that can be written to
+            | --wx------                        300 |                   | Denotes a file that can be written to and can
+            |                                       |                   |   be executed
+            | -r--------                        400 |                   | Denotes a file that can be read from
+            | -r-x------                        500 |                   | Denotes a file that can be read from and executed
+            | -rw-------                        600 |                   | Denotes a file that can be read from and written to
+            | -rwx------                        700 |                   | Denotes a file that can be read from,
+            |                                       |                   |   written to and executed
+            | sudo chmod 400 foo                    |                   | Make sure the file is readable by the
+            |                                       |                   |   assigned user
+            | sudo chmod 600 foo                    |                   | Make sure the file is readable and writeable
+            |                                       |                   |   by the assigned user
+            | sudo chmod 700 foo                    |                   | Make sure the file is readable, writeable and
+            |                                       |                   |   executable by the assigned user
+            | sudo chmod 700 /dir/subdir            |                   | Allow everything (for the assigned user) for
+            |                                       |                   |   the /dir/subdir directory
+            | sudo chmod -R 700 /dir/subdir         |                   | Allow everything (for the assigned user) for
+            |                                       |                   |   the /dir/subdir directory and all of it's
+            |                                       |                   |   content
