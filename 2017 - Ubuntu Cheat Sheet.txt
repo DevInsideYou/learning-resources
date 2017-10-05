@@ -25,6 +25,7 @@ Navigation  |
             |                                       |                   |   (also shows human readble size)
             | ll or ls -l                           |                   | List content of the current directory in form
             |                                       |                   |   of a table (includes permissions)
+            | touch foo                             |                   | Creates a file called foo
             | mkdir dir                             |                   | Make/create a directory called dir
             | mkdir -p dir/subdir                   |                   | Make/create a directory called dir
             |                                       |                   |   and also create a directory subdir inside of it
