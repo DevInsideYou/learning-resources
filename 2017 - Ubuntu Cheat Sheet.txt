@@ -80,7 +80,7 @@ Ownership   |
             |                                       |                   |   called "user" and group called "group"
             | sudo chown user:group /dir/subdir     |                   | Change the owner of the directory /dir/subdir
             |                                       |                   |   to user called "user" and group called "group"
-            | sudo chown -r user:group /dir/subdir  |                   | Change the owner of the directory /dir/subdir
+            | sudo chown -R user:group /dir/subdir  |                   | Change the owner of the directory /dir/subdir
             |                                       |                   |   and everything inside of it to user called
             |                                       |                   |   "user" and group called "group"
 Permissions | (the first digit stands for the user, the second stands for the group and the third stands for everyone else)
