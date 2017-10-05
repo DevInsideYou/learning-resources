@@ -9,10 +9,10 @@ Terminal    |
             |                                       | Down Arrow        | Next command (after pressing Up Arrow of course)
             |                                       | Ctrl+R            | Search for a command in history or
             |                                       |                   |   previous commands (select by pressing
-                                                                        |   the "tab" key on the keyboard)
+            |                                       |                   |   the "tab" key on the keyboard)
             | clear                                 | Ctrl+L            | Scroll down until the first line is at the
-                                                                        |   top of the terminal
-                                                                        |   (effectively clear the terminal screen)
+            |                                       |                   |   top of the terminal
+            |                                       |                   |   (effectively clear the terminal screen)
 Navigation  |
             | man ls                                |                   | Show manual for the 'ls' command
             |                                       |                   |   (works with every command)
@@ -25,6 +25,9 @@ Navigation  |
             |                                       |                   |   (also shows human readble size)
             | ll or ls -l                           |                   | List content of the current directory in form
             |                                       |                   |   of a table (includes permissions)
+            | mkdir dir                             |                   | Make/create a directory called dir
+            | mkdir -p dir/subdir                   |                   | Make/create a directory called dir
+            |                                       |                   |   and also create a directory subdir inside of it
             | cd /dir/subdir                        |                   | Change directory to /dir/subdir
             |                                       |                   |   (does not work with sudo)
             | cp source target                      |                   | Copy file called source to the file called target
