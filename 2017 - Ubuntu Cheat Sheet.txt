@@ -36,6 +36,8 @@ Navigation  |
             |                                       |                   |   graphical file explorer
             | nautilus /dir/subdir                  |                   | Open the /dir/subdir directory in the
             |                                       |                   |   graphical file explorer
+            |                                       | Ctrl+H            | Show/hide hidden files
+            |                                       | (in nautilus)     |
 Processes   |
             | ./program                             |                   | Run a program by opening the file called
             |                                       |                   |   "program" in the current directory
