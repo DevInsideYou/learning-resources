@@ -10,6 +10,7 @@ Terminal    |
             |                                       | Ctrl+R            | Search for a command in history or
             |                                       |                   |   previous commands (select by pressing
             |                                       |                   |   the "tab" key on the keyboard)
+            |                                       | TAB               | Autocomplete command
             | clear                                 | Ctrl+L            | Scroll down until the first line is at the
             |                                       |                   |   top of the terminal
             |                                       |                   |   (effectively clear the terminal screen)
