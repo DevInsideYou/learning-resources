@@ -1,3 +1,5 @@
+Resource for this video: https://youtu.be/tgNhF_PxBSU
+
 Category    | Command                               | Keyboard Shortcut | Description
 ----------- | ------------------------------------- | ----------------- | --------------------------------------------------
 Terminal    |
@@ -110,3 +112,5 @@ Permissions | (the first digit stands for the user, the second stands for the gr
             | sudo chmod -R 700 /dir/subdir         |                   | Allow everything (for the assigned user) for
             |                                       |                   |   the /dir/subdir directory and all of it's
             |                                       |                   |   content
+
+Resource for this video: https://youtu.be/tgNhF_PxBSU
