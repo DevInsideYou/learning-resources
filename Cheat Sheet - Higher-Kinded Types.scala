@@ -94,5 +94,5 @@ object HigherKindedTypes extends App {
 // Kind  Two Type | (* -> *) -> * | a type constructor which takes a type of kind * -> * and produces a type of kind *
 
 // Note that at least in Scala types are not curried, so even though a Map[_, _] takes 2 parameters it is a
-// Kind One Type |  * -> *  -> * | parameters are of Kind Zero | *      | in contrast to being a
-// Kind Two Type | (* -> *) -> * | parameter  is  of Kind  One | * -> *
+// Kind  One Type |  * -> *  -> * | parameters are of Kind Zero | *      | in contrast to being a
+// Kind  Two Type | (* -> *) -> * | parameter  is  of Kind  One | * -> *
