@@ -89,8 +89,8 @@ Ownership   |
 Permissions | (the first digit stands for the user, the second stands for the group and the third stands for everyone else)
             | d---------                            |                   | Denotes a directory
             | d--x------                            |                   | Denotes a directory that can be changed into
-            | ----------                        000 |                   | Denotes a file that cannot neither be read
-            |                                       |                   |   from or written to (also can't be executed)
+            | ----------                        000 |                   | Denotes a file that can neither be read
+            |                                       |                   |   from nor written to (also can't be executed)
             | ---x------                        100 |                   | Denotes a file that can be executed
             |                                       |                   |   (ran as a program)
             | --w-------                        200 |                   | Denotes a file that can be written to
