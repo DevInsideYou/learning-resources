@@ -85,7 +85,7 @@ These steps assume `Ubuntu 20.04 LTS` which runs on WSL`2` but should work under
     [user]
     default=your_user_name
     ```
-7. You might be interesting in using the following as your starting directory (the example shown is for Windows Terminal):
+7. You might be interested in using the following as your starting directory (the example shown is for Windows Terminal):
     ```json
     "startingDirectory": "\\\\wsl$\\playground\\home\\your_user_name"
     ```
