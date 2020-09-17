@@ -127,7 +127,7 @@ These steps assume `Ubuntu 20.04 LTS` which runs on WSL`2` but should work under
     1. `sudo apt install -y keychain`
     2. put the following into your `~/.profile` (note the `-sh` and NOT`.sh`):
         ```bash
-        keychain --nogui --quiet ~/.ssh/id_rsa
+        keychain --nogui --quiet $HOME/.ssh/id_rsa
         source $HOME/.keychain/$(hostname)-sh
         ```
 11. Install and configure an X Server (for GUI apps and clipboard sharing).
