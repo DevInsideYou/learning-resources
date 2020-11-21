@@ -1,5 +1,7 @@
 # Windows Subsystem for Linux (WSL) 2
 
+### This is a resource for the [WSL Playlist](https://www.youtube.com/playlist?list=PLJGDHERh23x9_5rksXN2iHFA-8hF6YLZz).
+
 ## Windows Steps
 
 1. [Optional] Check version
