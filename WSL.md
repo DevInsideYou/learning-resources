@@ -19,24 +19,28 @@
     4. Press `OK`.
     5. Restart your machine.
 
-3. Install a distribution
+3. [Optional] Install a decent terminal (recommended: Windows Terminal)
+    1. Open the start menu by pressing the `Win` key.
+    2. Type in `store` to search for the `Microsoft Store` application and open it.
+    3. In the top right corner search for `Windows Terminal`.
+    4. Click `Get`.
+
+4. Open Windows Terminal
+    1. Press `Win+R`.
+    2. Type in `wt` and press `Enter` (the `wt.exe` is in this directory: `%USERPROFILE%\AppData\Local\Microsoft\WindowsApps` which is on the `%PATH%`).
+
+5. [Optional but recommended] Change the default WSL version from 1 to 2
+    1. Open Windows Terminal as described above.
+    2. Type in `wsl --set-default-version 2`.
+
+6. Install a distribution
     1. Open the start menu by pressing the `Win` key.
     2. Type in `store` to search for the `Microsoft Store` application and open it.
     3. In the top right corner search for `WSL`.
     4. Click on (for example) `Ubuntu 20.04 LTS`.
     5. Click `Get` (if already installed the button will show `Launch`). Note: the button is buggy and might say `Launch` even if the distribution in question is not installed.
 
-4. [Optional] Install a decent terminal (recommended: Windows Terminal)
-    1. Open the start menu by pressing the `Win` key.
-    2. Type in `store` to search for the `Microsoft Store` application and open it.
-    3. In the top right corner search for `Windows Terminal`.
-    4. Click `Get`.
-
-5. Open Windows Terminal
-    1. Press `Win+R`.
-    2. Type in `wt` and press `Enter` (the `wt.exe` is in this directory: `%USERPROFILE%\AppData\Local\Microsoft\WindowsApps` which is on the `%PATH%`)
-
-6. Changing install location of a WSL distribution (can be used for backups). The default location is: `%USERPROFILE%\AppData\Local\Packages`
+7. Changing install location of a WSL distribution (can be used for backups). The default location is: `%USERPROFILE%\AppData\Local\Packages`
     1. Open Windows Terminal as described above.
     2. List your distributions by typing `wsl -l -v`.
     3. Export your distribution to wherever you like and wait for it to finish the export:
@@ -54,11 +58,11 @@
         ```
         NEW_NAME can be the same as before but should not be if you want to install the same distribution multiple times. WSL differentiates distributions by name. This is also why the `Get` button in the Windows Store turns into a `Launch` button - it simply compares names.
 
-7. Change version of a WSL distribution. Changing the version basically means converting from a regular file system to a virtual drive in case of going from WSL1 to WSL2 or the other way around in case of WSL2 to WSL1. This can either be done during the `import` step (see above) by adding the `--version 1` or `--version 2` flags respectively or simply by setting the version to the desired one by typing `wsl --set-version DISTRIBUTION_NAME 1` or `wsl --set-version DISTRIBUTION_NAME 2` but behind the scenes an `export` and a consequent `import` will happen for you, which is why it takes roughly the same amount of time.
+8. Change version of a WSL distribution. Changing the version basically means converting from a regular file system to a virtual drive in case of going from WSL1 to WSL2 or the other way around in case of WSL2 to WSL1. This can either be done during the `import` step (see above) by adding the `--version 1` or `--version 2` flags respectively or simply by setting the version to the desired one by typing `wsl --set-version DISTRIBUTION_NAME 1` or `wsl --set-version DISTRIBUTION_NAME 2` but behind the scenes an `export` and a consequent `import` will happen for you, which is why it takes roughly the same amount of time.
 
-8. Change name of a WSL distribution. Unfortunately there is no shortcut that will do this for you. You need to jump thorugh the `export` -> `unregister` -> `import` hoops as described above, which can be easily scripted.
+9. Change name of a WSL distribution. Unfortunately there is no shortcut that will do this for you. You need to jump thorugh the `export` -> `unregister` -> `import` hoops as described above, which can be easily scripted.
 
-9. [WSL`2` only] Free unused space by compressing the virtual hard drive. Similar to most databases, virtual hard drives don't free up the unused space after allocation. Note the size of the hard drive -> Copy over a large file -> Remove the file. Note the size of the hard drive. It didn't free the space of the removed large file.
+10. [WSL`2` only] Free unused space by compressing the virtual hard drive. Similar to most databases, virtual hard drives don't free up the unused space after allocation. Note the size of the hard drive -> Copy over a large file -> Remove the file. Note the size of the hard drive. It didn't free the space of the removed large file.
     1. Press the `Win` key.
     2. Type in `powershell`.
     3. Right click on `Windows PowerShell` and click on "Run as administrator".
