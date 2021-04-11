@@ -1,3 +1,5 @@
+Resource for https://www.youtube.com/watch?v=JlfCRlFHmd8
+
 # Conventional installation instrucitons for Ubuntu
 
 ## [Node.js](https://nodejs.org)
