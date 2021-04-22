@@ -1,6 +1,6 @@
 Resource for https://www.youtube.com/watch?v=JlfCRlFHmd8
 
-# Conventional installation instrucitons for Ubuntu
+# Conventional installation instructions for Ubuntu
 
 ## [Node.js](https://nodejs.org)
 Copied from [DevInsideYou/install-nodejs](https://github.com/DevInsideYou/install-nodejs):
