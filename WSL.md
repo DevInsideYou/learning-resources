@@ -131,10 +131,11 @@ These steps assume `Ubuntu 20.04 LTS` which runs on WSL`2` but should work under
     6. Press `OK`.
 10. Cache your ssh key with keychain:
     1. `sudo apt install -y keychain`
-    2. put the following into your `~/.profile` (note the `-sh` and NOT`.sh`):
+    2. put the following into your `~/.zshrc` (do **NOT** put it in your .profile):
         ```bash
-        keychain --nogui --quiet $HOME/.ssh/id_rsa
-        source $HOME/.keychain/$(hostname)-sh
+        if [[ $(command -v keychain) ]]; then
+          eval `keychain --eval --quiet id_rsa`
+        fi
         ```
 11. Install and configure an X Server (for GUI apps and clipboard sharing).
     1. There are multiple to choose from. I tried Xming and had no issues with it. Get it [here](https://sourceforge.net/projects/xming/files/latest/download) and install it by clicking `Next` a bunch of times. The default settings work just fine so there is no need to fiddle with them.
